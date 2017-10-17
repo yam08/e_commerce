@@ -8,7 +8,7 @@ public class Main {
 		SmartPhone sm1 = new SmartPhone();
 		
 		  		int categoriaLibro;
-		  		int categoriaSmarPhone=0;
+		  		int categoriaSmartPhone;
 		  		int televisore;		  		
 		  		String cognome;
 		  		
@@ -20,16 +20,17 @@ public class Main {
 				
 				
 
-			    //  Imput da Tastiera
+			  //Imput da Tastiera
 			    Scanner sc = new Scanner(System.in);
 			    
 			    System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
 			    
 			    categoriaLibro = sc.nextInt();
-			    if(categoriaSmarPhone==2) System.out.println(sm1);
-			    categoriaSmarPhone = sc.nextInt();
+			    categoriaSmartPhone = sc.nextInt();
 			    televisore = sc.nextInt();			    
 			    cognome= sc.nextLine();
+				
+	            if(categoriaSmartPhone==2) System.out.println("SmartPhone");
 				
 				
 				OrdineDiVendita odv = new OrdineDiVendita();
