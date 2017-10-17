@@ -6,6 +6,13 @@ public class Main {
 	public static void main(String[] args) {	
 		
 		SmartPhone sm1 = new SmartPhone();
+	    sm1.setMarca("Honor");
+	    sm1.setModello("Honor 7");
+	    sm1.setDisplay("Amoled");
+	    sm1.setCpu("MTK830");
+	    sm1.setRam("3 Gb");
+	    //sm1.toString();
+	    //System.out.println(sm1);
 		
 		  		int categoriaLibro;
 		  		int categoriaSmartPhone;
@@ -25,12 +32,14 @@ public class Main {
 			    
 			    System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
 			    
-			    categoriaLibro = sc.nextInt();
+			    //categoriaLibro = sc.nextInt();
 			    categoriaSmartPhone = sc.nextInt();
-			    televisore = sc.nextInt();			    
-			    cognome= sc.nextLine();
+			    if(categoriaSmartPhone==2) System.out.println(sm1.toString());
 				
-	            if(categoriaSmartPhone==2) System.out.println("SmartPhone");
+	            televisore = sc.nextInt();
+	            cognome= sc.nextLine();
+				
+			   
 				
 				
 				OrdineDiVendita odv = new OrdineDiVendita();
