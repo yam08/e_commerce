@@ -25,5 +25,11 @@ public class Libro {
 	{
 	return numeroPagina;
 }
+	
+	@Override
+	public String toString(){
+		
+		return "";
+	}
 
 }
