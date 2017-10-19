@@ -3,10 +3,31 @@ package gestionale;
 public class Libro {
 	
 	private String autore;
-	private String numeroPagina;
+	private String titolo;
+	private String genero;
+    private String numeroPagina;
 
+	public void setTitolo(String titolo)
+	{
+	this.titolo = titolo;
+	}
 
-	public void setAutore(String autore)
+	public String getTitolo()
+	{
+	return titolo;
+	}
+
+	public void setGenero(String genero)
+	{
+	this.genero = genero;
+	}
+
+	public String getGenero()
+	{
+	return genero;
+	}
+
+    public void setAutore(String autore)
 	{
 	this.autore = autore;
 	}
@@ -29,7 +50,7 @@ public class Libro {
 	@Override
 	public String toString(){
 		
-		return "";
+		return "Autore: " + getAutore() + "\nTitolo: " + getTitolo() + "\nGenero: " + getGenero()+ "\nPaginas: " + getNumeroPagina();
 	}
 
 }

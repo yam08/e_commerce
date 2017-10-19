@@ -4,6 +4,11 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {	
+	
+	int categoriaLibro;
+	int categoriaSmartPhone=0;
+	int categoriatelevisore;		  		
+	String cognome;	
 		
 				SmartPhone sm1 = new SmartPhone();
 			    sm1.setMarca("Honor");
@@ -15,34 +20,30 @@ public class Main {
 			    //System.out.println(sm1);
 			    
 			    Libro lb1 = new Libro();
+				lb1.setAutore("Isabel Allende");
+				lb1.setTitolo("El amor en los tiempos del colera");
+				lb1.setGenero("Drama");
+				lb1.setNumeroPagina("458");
+				lb1.toString();
 			    
-		
-		  		int categoriaLibro;
-		  		int categoriaSmartPhone;
-		  		int televisore;		  		
-		  		String cognome;		  		
-				
-			    System.out.println("Benvenuto nel nostro Negozio\n");
+				System.out.println("Benvenuto nel nostro Negozio\n");
 				System.out.println("Seleziona tra queste categorie:\n");
 				
-				
-				
-
-			  //Imput da Tastiera
+				//Imput da Tastiera
 			    Scanner sc = new Scanner(System.in);
 			    
 			    System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
 			    
 			    categoriaLibro = sc.nextInt();
 			    if(categoriaLibro == 1){
-			    	System.out.println();
-			    	
-			    	
+			    	System.out.println("Libros\n" + lb1);
 			    }
-			    categoriaSmartPhone = sc.nextInt();
-			    if(categoriaSmartPhone==2) System.out.println(sm1.toString());
 				
-	            televisore = sc.nextInt();
+			    categoriaSmartPhone = sc.nextInt();
+			    //if(categoriaSmartPhone==2) System.out.println(sm1.toString());
+				
+	            categoriatelevisore = sc.nextInt();
+				
 	            cognome= sc.nextLine();
 				
 			   
