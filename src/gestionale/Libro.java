@@ -50,7 +50,7 @@ public class Libro {
 	@Override
 	public String toString(){
 		
-		return "Autore: " + getAutore() + "\nTitolo: " + getTitolo() + "\nGenero: " + getGenero()+ "\nPaginas: " + getNumeroPagina();
+		return "Libro\n"+"Autore: " + getAutore() + "\nTitolo: " + getTitolo() + "\nGenero: " + getGenero()+ "\nPaginas: " + getNumeroPagina();
 	}
 
 }
