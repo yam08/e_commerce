@@ -1,7 +1,12 @@
 package gestionale;
 
 public class Televisore extends ProdottoElettronico {
+
 	
+   public Televisore(String marca, String modello){
+		super(marca, modello);
+	}
+ 
 	@Override
 	public String toString(){
 		return "\nTelevisore\n"
@@ -9,5 +14,4 @@ public class Televisore extends ProdottoElettronico {
 		+"\nModello: "+getModello()
 		+"\nPrezzo: "+getPrezzo();
 }
-
 }

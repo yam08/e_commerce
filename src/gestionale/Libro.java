@@ -6,6 +6,17 @@ public class Libro {
 	private String titolo;
 	private String genero;
     private String numeroPagina;
+	private double prezzo;
+
+	public void setPrezzo(double prezzo)
+	{
+	this.prezzo = prezzo;
+	}
+
+	public double getPrezzo()
+	{
+	return prezzo;
+	}
 
 	public void setTitolo(String titolo)
 	{
@@ -50,7 +61,12 @@ public class Libro {
 	@Override
 	public String toString(){
 		
-		return "Libro\n"+"Autore: " + getAutore() + "\nTitolo: " + getTitolo() + "\nGenero: " + getGenero()+ "\nPaginas: " + getNumeroPagina();
+		return "Libro\n"
+		+"Autore: " + getAutore() 
+		+ "\nTitolo: " + getTitolo() 
+		+ "\nGenero: " + getGenero()
+		+ "\nPagine: " + getNumeroPagina()
+		+ "\nPrezzo: "+ getPrezzo()+ " €";
 	}
 
 }

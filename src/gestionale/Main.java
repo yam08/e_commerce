@@ -7,34 +7,28 @@ public class Main {
 	
 	int categoria;
 	
-	SmartPhone sm1 = new SmartPhone();
-    sm1.setMarca("Honor");
-	sm1.setModello("Honor 7");
-	sm1.setDisplay("Amoled");
-	sm1.setCpu("MTK830");
-	sm1.setRam("3 Gb");
-	sm1.toString();
+    SmartPhone sm1 = new SmartPhone("Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
+    SmartPhone sm2 = new SmartPhone("Iphone","Iphone8","Retina","Cortex","3gb",708.3);
+    SmartPhone sm3 = new SmartPhone("HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
+    SmartPhone sm4 = new SmartPhone("Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
+	SmartPhone sm5 = new SmartPhone("Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
+	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", " Snagdragon", "6gb",987.2);
 	
-	SmartPhone sm2=new SmartPhone();
-	sm2.setMarca("Iphone");
-	sm2.setModello("Iphone8");
-	sm2.setDisplay("Retina");
-	sm2.setCpu("Cortex");
-	sm2.setRam("3 Gb");
-	sm2.toString();
 			    
-	Libro lb1 = new Libro();
+    Libro lb1 = new Libro();
 	lb1.setAutore("Isabel Allende");
 	lb1.setTitolo("El amor en los tiempos del colera");
 	lb1.setGenero("Drama");
 	lb1.setNumeroPagina("458");
+	lb1.setPrezzo(46.60);
 	lb1.toString();
+  
 	
-	Televisore tv1 = new Televisore();
-	tv1.setMarca("Tochiva");
-	tv1.setModello("Rezgna");
+	Televisore tv1 = new Televisore("Tochiva", "Rezgna");
 	tv1.setPrezzo(1000);
 	tv1.toString();
+	
+	
 
     System.out.println("Benvenuto nel nostro Negozio\n");
 	System.out.println("Seleziona tra queste categorie:\n");
@@ -48,7 +42,24 @@ public class Main {
 
 	case 1:if(categoria==1) System.out.println(lb1);
 	       break;
-	case 2:if(categoria==2) System.out.println(sm1);
+	case 2:ArrayList <SmartPhone>smartPhone= new ArrayList<SmartPhone>();
+	smartPhone.add(sm1);
+	smartPhone.add(sm2);
+	smartPhone.add(sm3);
+	smartPhone.add(sm4);
+	smartPhone.add(sm5);
+	smartPhone.add(sm6);
+	
+  
+	
+	for(int i=0;i<smartPhone.size();i++){
+		System.out.println(smartPhone.get(i)+"\n");
+		}
+					 
+					
+	
+		
+		   //if(categoria==2) System.out.println(sm1);
 	       break;
 	case 3:if(categoria==3) System.out.println(tv1);
 	       break;
