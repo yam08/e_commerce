@@ -12,7 +12,7 @@ public class Main {
     SmartPhone sm3 = new SmartPhone("HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
     SmartPhone sm4 = new SmartPhone("Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
 	SmartPhone sm5 = new SmartPhone("Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
-	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", " Snagdragon", "6gb",987.2);
+	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
 	
 			    
     Libro lb1 = new Libro();
@@ -22,15 +22,11 @@ public class Main {
 	lb1.setNumeroPagina("458");
 	lb1.setPrezzo(46.60);
 	lb1.toString();
-  
-	
-	Televisore tv1 = new Televisore("Tochiva", "Rezgna");
-	tv1.setPrezzo(1000);
-	tv1.toString();
-	
-	
-
-    System.out.println("Benvenuto nel nostro Negozio\n");
+    
+	Televisore tv1 = new Televisore("Tochiva", "Rezgna", 455.8);
+	Televisore tv2 = new Televisore("Panasonic", "Station", 448.5);
+    
+	System.out.println("Benvenuto nel nostro Negozio\n");
 	System.out.println("Seleziona tra queste categorie:\n");
 				
 	//Imput da Tastiera
@@ -50,19 +46,22 @@ public class Main {
 	smartPhone.add(sm5);
 	smartPhone.add(sm6);
 	
-  
-	
 	for(int i=0;i<smartPhone.size();i++){
 		System.out.println(smartPhone.get(i)+"\n");
 		}
-					 
-					
-	
+		break;
 		
-		   //if(categoria==2) System.out.println(sm1);
-	       break;
-	case 3:if(categoria==3) System.out.println(tv1);
-	       break;
+	case 3: ArrayList <Televisore> tv = ArrayList <Televisore>;
+		tv.add(tv1);
+		tv.add(tv2);
+		
+		for(Televisore t : tv){
+			
+			System.out.println(t);
+			
+		}
+		//if(categoria==3) System.out.println(tv1);
+	    break;
 	}
 				
     OrdineDiVendita odv = new OrdineDiVendita();
