@@ -8,6 +8,15 @@ public class Libro {
     private String numeroPagina;
 	private double prezzo;
 
+	public Libro(String autore, String titolo, String genero, String numeroPagina, double prezzo)
+	{
+	this.autore = autore;
+	this.titolo = titolo;
+	this.genero = genero;
+	this.numeroPagina = numeroPagina;
+	this.prezzo = prezzo;
+	}
+
 	public void setPrezzo(double prezzo)
 	{
 	this.prezzo = prezzo;

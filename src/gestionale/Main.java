@@ -14,17 +14,21 @@ public class Main {
 	SmartPhone sm5 = new SmartPhone("Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
 	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
 	
-			    
-    Libro lb1 = new Libro();
-	lb1.setAutore("Isabel Allende");
-	lb1.setTitolo("El amor en los tiempos del colera");
-	lb1.setGenero("Drama");
-	lb1.setNumeroPagina("458");
-	lb1.setPrezzo(46.60);
-	lb1.toString();
+	Libro lb1 = new Libro("Isabel Allende", "Paula", "Drama", "458", 46.6);
+	Libro lb2 = new Libro("Edoardo", "Metafore", "Scienze Umane", "260", 26.6);
+	Libro lb3 = new Libro("M.D. O'Brien", "Il nemici", "Drama", "567", 44.8);
+	Libro lb4 = new Libro("Claudio De Sio Cesari", "Java 8", "Scienze Informatiche", "690", 45.6);
+	Libro lb5 = new Libro("Cyndi Dale", "Corpo Sottile", "Scienze Umane", "390", 32.8);
+	Libro lb6 = new Libro("Gabriel Garcia Marquez", "El amor en los tiempos del colera", "Drama", "458", 46.6);
+	
     
 	Televisore tv1 = new Televisore("Tochiva", "Rezgna", 455.8);
 	Televisore tv2 = new Televisore("Panasonic", "Station", 448.5);
+	Televisore tv3 = new Televisore("Sony", "Star", 600.9);
+	Televisore tv4 = new Televisore("Samsung", "Flixwear", 900.45);
+	Televisore tv5 = new Televisore("Loewe", "Precise", 1230.98);
+	Televisore tv6 = new Televisore("Samsung", "Master Star",  608.5);
+	
     
 	System.out.println("Benvenuto nel nostro Negozio\n");
 	System.out.println("Seleziona tra queste categorie:\n");
@@ -36,32 +40,41 @@ public class Main {
 
 	switch(categoria){
 
-	case 1:if(categoria==1) System.out.println(lb1);
-	       break;
-	case 2:ArrayList <SmartPhone>smartPhone= new ArrayList<SmartPhone>();
+	case 1: ArrayList <Libro> lb = new ArrayList <Libro>();
+	lb.add(lb1);
+	lb.add(lb2);
+	lb.add(lb3);
+	lb.add(lb4);
+	lb.add(lb5);
+	lb.add(lb6);
+	
+	
+		System.out.println(lb1);
+	break;
+	      
+	case 2: ArrayList <SmartPhone>smartPhone= new ArrayList<SmartPhone>();
 	smartPhone.add(sm1);
 	smartPhone.add(sm2);
 	smartPhone.add(sm3);
 	smartPhone.add(sm4);
 	smartPhone.add(sm5);
 	smartPhone.add(sm6);
-	
 	for(int i=0;i<smartPhone.size();i++){
 		System.out.println(smartPhone.get(i)+"\n");
 		}
-		break;
+	break;
 		
-	case 3: ArrayList <Televisore> tv = ArrayList <Televisore>;
-		tv.add(tv1);
-		tv.add(tv2);
-		
-		for(Televisore t : tv){
-			
-			System.out.println(t);
-			
-		}
-		//if(categoria==3) System.out.println(tv1);
-	    break;
+	case 3: ArrayList <Televisore> tv = new ArrayList <Televisore>();
+	tv.add(tv1);
+	tv.add(tv2);
+	tv.add(tv3);
+	tv.add(tv4);
+	tv.add(tv5);
+	tv.add(tv6);
+	for(Televisore t : tv){
+	   System.out.println(t);
+	   }
+       break;
 	}
 				
     OrdineDiVendita odv = new OrdineDiVendita();
