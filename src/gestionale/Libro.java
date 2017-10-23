@@ -70,7 +70,7 @@ public class Libro {
 	@Override
 	public String toString(){
 		
-		return "Libro\n"
+		return "\nLibro\n"
 		+"Autore: " + getAutore() 
 		+ "\nTitolo: " + getTitolo() 
 		+ "\nGenero: " + getGenero()

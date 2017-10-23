@@ -48,6 +48,11 @@ public class Main {
 	lb.add(lb5);
 	lb.add(lb6);
 	
+	Iterator<Libro> iterator = lb.iterator();
+	while(iterator.hasNext()){
+		System.out.println(iterator.next());
+		}
+	
 	
 		System.out.println(lb1);
 	break;
