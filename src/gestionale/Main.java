@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {	
 	
 	int categoria;
+	Libro libros;
 	
     SmartPhone sm1 = new SmartPhone("Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
     SmartPhone sm2 = new SmartPhone("Iphone","Iphone8","Retina","Cortex","3gb",708.3);
@@ -33,14 +34,17 @@ public class Main {
 	System.out.println("Benvenuto nel nostro Negozio\n");
 	System.out.println("Seleziona tra queste categorie:\n");
 				
-	//Imput da Tastiera
+	/*
+	Imput da Tastiera
+	*/
 	Scanner sc = new Scanner(System.in);
     System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
     categoria= sc.nextInt();
-
-	switch(categoria){
-
-	case 1: ArrayList <Libro> lb = new ArrayList <Libro>();
+	
+	/*
+	Iterazione di ogni articolo con ArrayList
+	*/
+	ArrayList <Libro> lb = new ArrayList <Libro>();
 	lb.add(lb1);
 	lb.add(lb2);
 	lb.add(lb3);
@@ -48,40 +52,112 @@ public class Main {
 	lb.add(lb5);
 	lb.add(lb6);
 	
-	Iterator<Libro> iterator = lb.iterator();
-	while(iterator.hasNext()){
-		System.out.println(iterator.next());
-		}
-	
-	
-		System.out.println(lb1);
-	break;
-	      
-	case 2: ArrayList <SmartPhone>smartPhone= new ArrayList<SmartPhone>();
+	ArrayList <SmartPhone>smartPhone= new ArrayList<SmartPhone>();
 	smartPhone.add(sm1);
 	smartPhone.add(sm2);
 	smartPhone.add(sm3);
 	smartPhone.add(sm4);
 	smartPhone.add(sm5);
 	smartPhone.add(sm6);
-	for(int i=0;i<smartPhone.size();i++){
-		System.out.println(smartPhone.get(i)+"\n");
-		}
-	break;
-		
-	case 3: ArrayList <Televisore> tv = new ArrayList <Televisore>();
+	
+	ArrayList <Televisore> tv = new ArrayList <Televisore>();
 	tv.add(tv1);
 	tv.add(tv2);
 	tv.add(tv3);
 	tv.add(tv4);
 	tv.add(tv5);
 	tv.add(tv6);
+ 
+	/*
+	Selezione delle categorie tramite switch
+	*/
+    switch(categoria){
+
+	case 1: 
+	Iterator<Libro> iterator = lb.iterator();
+	while(iterator.hasNext()){
+		libros = iterator.next();
+		System.out.println(libros);
+		}
+		break;
+	      
+	case 2: 
+	for(int i=0;i<smartPhone.size();i++){
+		System.out.println(smartPhone.get(i)+"\n");
+		}
+	break;
+		
+	case 3: 
 	for(Televisore t : tv){
 	   System.out.println(t);
-	   }
-       break;
+	  }
+	  break;
 	}
-				
+	 
+	System.out.println("\nVuole rivedere le altre categorie?");
+	System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
+	
+	/*
+	Selezione delle categorie se ce un ripenzamento
+	*/
+	categoria=sc.nextInt();
+	
+	switch(categoria){
+
+	case 1: 
+	Iterator<Libro> iterator = lb.iterator();
+	while(iterator.hasNext()){
+	libros = iterator.next();
+	System.out.println(libros);
+	}
+	break;
+	
+	case 2: 
+	for(int i=0;i<smartPhone.size();i++){
+	System.out.println(smartPhone.get(i)+"\n");
+	}
+	break;
+	
+	case 3: 
+	
+	for(Televisore t : tv){
+	System.out.println(t);
+	}
+	break;
+	}
+	
+	System.out.println("Selezione l'articolo desiderato");
+	
+	categoria=sc.nextInt();
+
+	switch(categoria){
+
+	case 1: 
+	Iterator<Libro> iterator = lb.iterator();
+	while(iterator.hasNext()){
+	libros = iterator.next();
+	System.out.println(libros);
+	}
+	break;
+
+	case 2: 
+	for(int i=0;i<smartPhone.size();i++){
+	System.out.println(smartPhone.get(i)+"\n");
+	}
+	break;
+
+	case 3: 
+
+	for(Televisore t : tv){
+	System.out.println(t);
+	}
+	break;
+	}
+	
+	System.out.println("Selezione l'articolo desiderato");
+
+	
+	
     OrdineDiVendita odv = new OrdineDiVendita();
 	odv.setCliente(new Cliente());
 	odv.setDataOrdine(new Date());
@@ -100,6 +176,8 @@ public class Main {
 	odv.getRigheOrdine().add(rigaOrd2);
 				
 	}
+	
+	
 
 }
 
