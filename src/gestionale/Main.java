@@ -172,7 +172,23 @@ public class Main {
 	}
 		
 	
-    
+    OrdineDiVendita odv = new OrdineDiVendita();    
+	odv.setCliente(new Cliente());
+	odv.setDataOrdine(new Date());
+	odv.setStatoOrdine(OrdineDiVendita.STATO_SPEDITO);
+	odv.setRigheOrdine(new ArrayList<RigaOrdine>());
+				
+	//inizio a popolare tutti i campi
+	
+	odv.getCliente().setNome("Roberto");
+	odv.getCliente().setCognome("Sturaro");
+	odv.getCliente().setCodiceFiscale("CPJGS77b879b");
+				
+	RigaOrdine rigaOrd1 = new RigaOrdine(1,sm1,1,sm1.getPrezzo());
+    RigaOrdine rigaOrd2 = new RigaOrdine(1,tv1,1, tv1.getPrezzo());
+				
+	odv.getRigheOrdine().add(rigaOrd1);
+	odv.getRigheOrdine().add(rigaOrd2);
 				
 	}
 	
