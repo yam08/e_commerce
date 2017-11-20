@@ -4,8 +4,8 @@ public class Televisore extends ProdottoElettronico {
 
 	private double prezzo;
 	
-   public Televisore(String marca, String modello, double prezzo){
-		super(marca, modello);
+   public Televisore(long id,String marca, String modello, double prezzo){
+		super(id, marca, modello);
 		this.prezzo=prezzo;
 		}
 	public void setPrezzo(double prezzo){

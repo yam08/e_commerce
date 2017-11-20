@@ -5,15 +5,15 @@ public class Main {
 
 	public static void main(String[] args) {	
 	
-	int categoria;
+    int categoria;
 	Libro libros;
 	
-    SmartPhone sm1 = new SmartPhone("Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
-    SmartPhone sm2 = new SmartPhone("Iphone","Iphone8","Retina","Cortex","3gb",708.3);
-    SmartPhone sm3 = new SmartPhone("HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
-    SmartPhone sm4 = new SmartPhone("Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
-	SmartPhone sm5 = new SmartPhone("Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
-	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
+    SmartPhone sm1 = new SmartPhone(1,"Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
+    SmartPhone sm2 = new SmartPhone(2,"Iphone","Iphone8","Retina","Cortex","3gb",708.3);
+    SmartPhone sm3 = new SmartPhone(3,"HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
+    SmartPhone sm4 = new SmartPhone(4,"Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
+	SmartPhone sm5 = new SmartPhone(5,"Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
+	SmartPhone sm6 = new SmartPhone(6,"Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
 	
 	Libro lb1 = new Libro("Isabel Allende", "Paula", "Drama", "458", 46.6);
 	Libro lb2 = new Libro("Edoardo", "Metafore", "Scienze Umane", "260", 26.6);
@@ -23,12 +23,12 @@ public class Main {
 	Libro lb6 = new Libro("Gabriel Garcia Marquez", "El amor en los tiempos del colera", "Drama", "458", 46.6);
 	
     
-	Televisore tv1 = new Televisore("Tochiva", "Rezgna", 455.8);
-	Televisore tv2 = new Televisore("Panasonic", "Station", 448.5);
-	Televisore tv3 = new Televisore("Sony", "Star", 600.9);
-	Televisore tv4 = new Televisore("Samsung", "Flixwear", 900.45);
-	Televisore tv5 = new Televisore("Loewe", "Precise", 1230.98);
-	Televisore tv6 = new Televisore("Samsung", "Master Star",  608.5);
+	Televisore tv1 = new Televisore(1,"Tochiva", "Rezgna", 455.8);
+	Televisore tv2 = new Televisore(2,"Panasonic", "Station", 448.5);
+	Televisore tv3 = new Televisore(3,"Sony", "Star", 600.9);
+	Televisore tv4 = new Televisore(4,"Samsung", "Flixwear", 900.45);
+	Televisore tv5 = new Televisore(5,"Loewe", "Precise", 1230.98);
+	Televisore tv6 = new Televisore(6,"Samsung", "Master Star",  608.5);
 	
     
 	System.out.println("Benvenuto nel nostro Negozio\n");
@@ -93,7 +93,8 @@ public class Main {
 	  }
 	  break;
 	}
-	 
+	
+    System.out.println("\nSelezione l'articolo desiderato della lista");
 	System.out.println("\nVuole rivedere le altre categorie?");
 	System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
 	
@@ -126,7 +127,9 @@ public class Main {
 	break;
 	}
 	
-	System.out.println("Selezione l'articolo desiderato");
+	System.out.println("\nSelezione l'articolo desiderato");
+	System.out.println("\nVuole rivedere le altre categorie?");
+	System.out.println("Seleziona il numero correspondente:\n\nLibro      [1]\nSmartphone [2]\nTelevisore [3]\n");
 	
 	categoria=sc.nextInt();
 
@@ -154,26 +157,22 @@ public class Main {
 	break;
 	}
 	
-	System.out.println("Selezione l'articolo desiderato");
-
+	System.out.println("\nSelezione l'articolo desiderato");
+	
+	int selezione=sc.nextInt();
 	
 	
-    OrdineDiVendita odv = new OrdineDiVendita();
-	odv.setCliente(new Cliente());
-	odv.setDataOrdine(new Date());
-	odv.setStatoOrdine(OrdineDiVendita.STATO_SPEDITO);
-	odv.setRigheOrdine(new ArrayList<RigaOrdine>());
-				
-	//inizio a popolare tutti i campi
-	odv.getCliente().setNome("Roberto");
-	odv.getCliente().setCognome("Sturaro");
-	odv.getCliente().setCodiceFiscale("CPJGS77b879b");
-				
-	RigaOrdine rigaOrd1 = new RigaOrdine(1,sm1,1,sm1.getPrezzo());
-    RigaOrdine rigaOrd2 = new RigaOrdine(1,tv1,1, tv1.getPrezzo());
-				
-	odv.getRigheOrdine().add(rigaOrd1);
-	odv.getRigheOrdine().add(rigaOrd2);
+	switch(selezione){
+	
+	case 1:if(selezione==sm1.getId()){
+		System.out.println("prova");
+		
+		}
+	break;
+	}
+		
+	
+    
 				
 	}
 	

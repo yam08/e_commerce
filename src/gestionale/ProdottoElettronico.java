@@ -5,7 +5,7 @@ public class ProdottoElettronico extends Prodotto{
 	private String modello; 
 	private String marca;
   
-	public ProdottoElettronico(String marca, String modello){
+	public ProdottoElettronico(long id, String marca, String modello){
 		this.marca=marca;
 		this.modello=modello;
 	}
