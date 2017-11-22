@@ -2,20 +2,31 @@ package gestionale;
 
 public class SmartPhone extends ProdottoElettronico{
 	
+
 	private double id;
+
+ 
 	private String display;
 	private String cpu;
 	private String ram;
 	private double prezzo;
 	
+
 	public SmartPhone(double id, String marca, String modello, String display, String cpu, String ram, double prezzo){
 		super (marca, modello);
 		this.id=id;
+		}
+	public SmartPhone(long id, String marca, String modello, String display, String cpu, String ram, double prezzo){
+		super (id, marca, modello);		
+
 		this.display=display;
 		this.cpu=cpu;
 		this.ram=ram;
 		this.prezzo=prezzo;
 	}
+	
+	
+	
 
 	public void setPrezzo(double prezzo)
 	{
@@ -55,7 +66,8 @@ public class SmartPhone extends ProdottoElettronico{
 	public String getRam()
 	{
 	return ram;
-	}
+	}	
+	
 	@Override
 	public String toString(){
 		return "Smartphone\n"
