@@ -9,7 +9,7 @@ public class RigaOrdine {
 	private OrdineDiVendita odv;
 	
 	public RigaOrdine(long id, Prodotto prodotto,int quantita, double prezzoUnitario){
-		super();
+		
 		this.id = id;
 		this.prodotto = prodotto;
 		this.quantita = quantita;

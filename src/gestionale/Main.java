@@ -8,12 +8,12 @@ public class Main {
 	int categoria;
 	Libro libros;
 	
-    SmartPhone sm1 = new SmartPhone("Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
-    SmartPhone sm2 = new SmartPhone("Iphone","Iphone8","Retina","Cortex","3gb",708.3);
-    SmartPhone sm3 = new SmartPhone("HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
-    SmartPhone sm4 = new SmartPhone("Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
-	SmartPhone sm5 = new SmartPhone("Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
-	SmartPhone sm6 = new SmartPhone("Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
+    SmartPhone sm1 = new SmartPhone(1.1,"Honor", "Honor 7", "Amoled","MTK830","3gb", 456.3);
+    SmartPhone sm2 = new SmartPhone(1.2,"Iphone","Iphone8","Retina","Cortex","3gb",708.3);
+    SmartPhone sm3 = new SmartPhone(1.3,"HTC", "U11", "Super Amoled", "Snagdragon", "4gb", 715.3 );
+    SmartPhone sm4 = new SmartPhone(1.4,"Huawei", "P10", "Super Amoled", "Snagdragon", "3gb", 576.7);
+	SmartPhone sm5 = new SmartPhone(1.5,"Sony","Xperia", "Super Amoled", "Snagdragon", "4gb", 620);
+	SmartPhone sm6 = new SmartPhone(1.6,"Samsung", "Note 8","Super Amoled", "Snagdragon", "6gb",987.2);
 	
 	Libro lb1 = new Libro("Isabel Allende", "Paula", "Drama", "458", 46.6);
 	Libro lb2 = new Libro("Edoardo", "Metafore", "Scienze Umane", "260", 26.6);
@@ -23,12 +23,12 @@ public class Main {
 	Libro lb6 = new Libro("Gabriel Garcia Marquez", "El amor en los tiempos del colera", "Drama", "458", 46.6);
 	
     
-	Televisore tv1 = new Televisore("Tochiva", "Rezgna", 455.8);
-	Televisore tv2 = new Televisore("Panasonic", "Station", 448.5);
-	Televisore tv3 = new Televisore("Sony", "Star", 600.9);
-	Televisore tv4 = new Televisore("Samsung", "Flixwear", 900.45);
-	Televisore tv5 = new Televisore("Loewe", "Precise", 1230.98);
-	Televisore tv6 = new Televisore("Samsung", "Master Star",  608.5);
+	Televisore tv1 = new Televisore(1.1,"Tochiva", "Rezgna", 455.8);
+	Televisore tv2 = new Televisore(1.2,"Panasonic", "Station", 448.5);
+	Televisore tv3 = new Televisore(1.3,"Sony", "Star", 600.9);
+	Televisore tv4 = new Televisore(1.4,"Samsung", "Flixwear", 900.45);
+	Televisore tv5 = new Televisore(1.5,"Loewe", "Precise", 1230.98);
+	Televisore tv6 = new Televisore(1.6,"Samsung", "Master Star",  608.5);
 	
     
 	System.out.println("Benvenuto nel nostro Negozio\n");
@@ -127,6 +127,7 @@ public class Main {
 	}
 	
 	System.out.println("Selezione l'articolo desiderato");
+	System.out.println("Voule rivedere le altre categorie?");
 	
 	categoria=sc.nextInt();
 
@@ -154,8 +155,9 @@ public class Main {
 	break;
 	}
 	
-	System.out.println("Selezione l'articolo desiderato");
-
+	System.out.println("\nSelezione l'articolo desiderato");
+    
+	
 	
 	
     OrdineDiVendita odv = new OrdineDiVendita();

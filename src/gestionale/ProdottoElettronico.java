@@ -4,13 +4,13 @@ public class ProdottoElettronico extends Prodotto{
 	
 	private String modello; 
 	private String marca;
-  
-	public ProdottoElettronico(String marca, String modello){
-		this.marca=marca;
-		this.modello=modello;
+
+	public ProdottoElettronico(String modello, String marca){  
+
+	this.modello=modello;
+	this.marca=marca;
 	}
-
-
+  
 	public void setModello(String modello)
 	{
 	this.modello = modello;
@@ -30,6 +30,7 @@ public class ProdottoElettronico extends Prodotto{
 	{
 	return marca;
 	}
+	
 	@Override
 	public String toString(){
 	return getMarca()+getModello();

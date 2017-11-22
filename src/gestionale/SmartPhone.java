@@ -2,13 +2,15 @@ package gestionale;
 
 public class SmartPhone extends ProdottoElettronico{
 	
+	private double id;
 	private String display;
 	private String cpu;
 	private String ram;
 	private double prezzo;
 	
-	public SmartPhone(String marca, String modello, String display, String cpu, String ram, double prezzo){
+	public SmartPhone(double id, String marca, String modello, String display, String cpu, String ram, double prezzo){
 		super (marca, modello);
+		this.id=id;
 		this.display=display;
 		this.cpu=cpu;
 		this.ram=ram;

@@ -2,18 +2,14 @@ package gestionale;
 
 public class Prodotto {
 	
-	private long id;
+	
 	private String nome;
 	private String descrizione;
 	private double prezzo;
 	private Categoria categoriaMerciologica;
 
-	public void setId(long id){
-	this.id=id;
-	}
-	public long getId(){
-	return id;
-	}
+	
+
 	public void setNome(String nome){
 	this.nome=nome;
 	}
